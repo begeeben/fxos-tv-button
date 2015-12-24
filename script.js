@@ -60,3 +60,8 @@ window.SmartButton = (function(win) {
   // Register and return the constructor
   return document.registerElement('smart-button', { prototype: proto });
 })(window);
+
+document.registerElement('extend-button', {
+  prototype: Object.create(HTMLButtonElement.prototype),
+  extends: 'button'
+});
